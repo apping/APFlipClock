@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4488.2" systemVersion="12E55" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <deployment defaultVersion="1552" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3715.3"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="APViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="qLD-pp-BHC"/>
+                        <viewControllerLayoutGuide type="bottom" id="Bci-7l-8BQ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FP2-lT-S1o" customClass="APFlipClock">
+                                <rect key="frame" x="20" y="112" width="280" height="68"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="68" id="ckX-wz-vFK"/>
+                                    <constraint firstAttribute="width" constant="280" id="zn2-h5-uLk"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="On4-Vw-N9l">
+                                <rect key="frame" x="20" y="326" width="35" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="35" id="ANP-NF-w8t"/>
+                                    <constraint firstAttribute="height" constant="30" id="dRz-Ua-vF9"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="Days">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="toggleDays:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="1aU-tU-xTK"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FV9-A3-Bw5">
+                                <rect key="frame" x="85" y="326" width="42" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="42" id="Cuw-Ik-O6n"/>
+                                    <constraint firstAttribute="height" constant="30" id="oan-RL-DWQ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="Hours">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="toggleHours:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Dss-R2-oig"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Toggle:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="euW-iz-bUR">
+                                <rect key="frame" x="20" y="297" width="56" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WkR-Mz-tYS">
+                                <rect key="frame" x="160" y="326" width="55" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="55" id="KVK-O1-62N"/>
+                                    <constraint firstAttribute="height" constant="30" id="eYZ-JW-5vA"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="Minutes">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="toggleMinutes:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="ojD-LC-BJX"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IjY-g4-Ysb">
+                                <rect key="frame" x="239" y="326" width="61" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="61" id="QDg-as-6vT"/>
+                                    <constraint firstAttribute="height" constant="30" id="Yfo-UX-4V3"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="Seconds">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="toggleSeconds:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="4fH-jG-DH5"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zn0-ER-4O2">
+                                <rect key="frame" x="20" y="480" width="110" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="bYY-i9-9UO"/>
+                                    <constraint firstAttribute="width" constant="110" id="k0M-3N-Z8l"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="Countdown 25h">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="countdownButtonAction:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="oJk-I7-ClL"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r4D-YU-9c6">
+                                <rect key="frame" x="20" y="466" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BCT-V0-Mk4">
+                                <rect key="frame" x="20" y="518" width="40" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="7lE-k2-wwP"/>
+                                    <constraint firstAttribute="height" constant="30" id="AnY-TI-ZdH"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="Clock">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="clockButtonAction:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="jFQ-s9-Fv8"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.1082208902" green="0.67128181460000003" blue="0.80213731529999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="Zn0-ER-4O2" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="20" id="12d-OD-TVX"/>
+                            <constraint firstItem="FV9-A3-Bw5" firstAttribute="leading" secondItem="On4-Vw-N9l" secondAttribute="trailing" constant="30" id="1kk-4K-8Lk"/>
+                            <constraint firstItem="BCT-V0-Mk4" firstAttribute="top" secondItem="Zn0-ER-4O2" secondAttribute="bottom" constant="8" id="BBJ-un-ikO"/>
+                            <constraint firstItem="FP2-lT-S1o" firstAttribute="leading" secondItem="euW-iz-bUR" secondAttribute="leading" id="DDa-sA-nDx"/>
+                            <constraint firstItem="On4-Vw-N9l" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="20" id="F9Q-Dx-dgl"/>
+                            <constraint firstItem="Bci-7l-8BQ" firstAttribute="top" relation="lessThanOrEqual" secondItem="FP2-lT-S1o" secondAttribute="bottom" constant="388" id="FE3-WE-7FP"/>
+                            <constraint firstItem="BCT-V0-Mk4" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="20" id="GOi-ig-Guk"/>
+                            <constraint firstItem="r4D-YU-9c6" firstAttribute="leading" secondItem="Zn0-ER-4O2" secondAttribute="leading" id="Gq5-IE-KEF"/>
+                            <constraint firstItem="FV9-A3-Bw5" firstAttribute="baseline" secondItem="On4-Vw-N9l" secondAttribute="baseline" id="JqP-Kb-ACD"/>
+                            <constraint firstItem="euW-iz-bUR" firstAttribute="leading" secondItem="On4-Vw-N9l" secondAttribute="leading" id="UTa-Cl-gNJ"/>
+                            <constraint firstItem="FP2-lT-S1o" firstAttribute="top" secondItem="qLD-pp-BHC" secondAttribute="bottom" constant="92" id="UYk-5S-jsZ"/>
+                            <constraint firstItem="r4D-YU-9c6" firstAttribute="top" relation="greaterThanOrEqual" secondItem="On4-Vw-N9l" secondAttribute="bottom" constant="20" id="d2c-18-0cv"/>
+                            <constraint firstItem="Bci-7l-8BQ" firstAttribute="top" secondItem="BCT-V0-Mk4" secondAttribute="bottom" constant="20" id="dWY-nn-xw0"/>
+                            <constraint firstItem="WkR-Mz-tYS" firstAttribute="baseline" secondItem="IjY-g4-Ysb" secondAttribute="baseline" id="gSO-Fv-uwN"/>
+                            <constraint firstItem="BCT-V0-Mk4" firstAttribute="top" secondItem="r4D-YU-9c6" secondAttribute="bottom" constant="22" id="hor-CG-doe"/>
+                            <constraint firstItem="WkR-Mz-tYS" firstAttribute="baseline" secondItem="FV9-A3-Bw5" secondAttribute="baseline" id="kd4-pu-72o"/>
+                            <constraint firstItem="WkR-Mz-tYS" firstAttribute="leading" secondItem="FV9-A3-Bw5" secondAttribute="trailing" constant="33" id="uCz-ny-1Ys"/>
+                            <constraint firstItem="On4-Vw-N9l" firstAttribute="top" secondItem="euW-iz-bUR" secondAttribute="bottom" constant="8" symbolic="YES" id="uwp-LU-wLU"/>
+                            <constraint firstItem="Bci-7l-8BQ" firstAttribute="top" secondItem="WkR-Mz-tYS" secondAttribute="bottom" constant="212" id="vyo-sm-9lm"/>
+                            <constraint firstItem="IjY-g4-Ysb" firstAttribute="leading" secondItem="WkR-Mz-tYS" secondAttribute="trailing" constant="24" id="w1H-mD-ksZ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="flipClock" destination="FP2-lT-S1o" id="SSN-At-evr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
