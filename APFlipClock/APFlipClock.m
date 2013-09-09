@@ -215,7 +215,7 @@ static CGSize segmentSize = { 74, 68 };
 
 - (void)flip {
     NSInteger seconds = (int)[_countdownDate timeIntervalSinceNow];
-    if (seconds <= 0) {
+    if (seconds < 0) {
         [_timer invalidate];
         return;
     }
@@ -238,7 +238,8 @@ static CGSize segmentSize = { 74, 68 };
     NSDateComponents *comps = [cal components:NSHourCalendarUnit|NSMinuteCalendarUnit|NSSecondCalendarUnit fromDate:[NSDate date]];
     [_hoursSegment flipWithDigits:comps.hour];
     [_minutesSegment flipWithDigits:comps.minute];
-    if (_showSeconds) [_secondsSegment flipWithDigits:comps.second];
+    if (_showSeconds)
+        [_secondsSegment flipWithDigits:comps.second];
 }
 
 @end
