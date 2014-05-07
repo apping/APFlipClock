@@ -30,19 +30,31 @@ static CGSize segmentSize = { 74, 68 };
     [_timer invalidate];
 }
 
+- (void)commonInit {
+    // Create the segments
+    _daysSegment = [[APFlipClockSegment alloc] initWithDigits:0];
+    _hoursSegment = [[APFlipClockSegment alloc] initWithDigits:0];
+    _minutesSegment = [[APFlipClockSegment alloc] initWithDigits:0];
+    _secondsSegment = [[APFlipClockSegment alloc] initWithDigits:0];
+    
+    self.backgroundColor = [UIColor clearColor];
+    
+    // We default to the current time
+    [self setClockType:APFlipClockTypeCountdown];
+}
+
+- (id)initWithFrame:(CGRect)frame {
+    self = [super initWithFrame:frame];
+    if (self) {
+        [self commonInit];
+    }
+    return self;
+}
+
 - (id)initWithCoder:(NSCoder *)aDecoder {
     self = [super initWithCoder:aDecoder];
     if (self) {
-        // Create the segments
-        _daysSegment = [[APFlipClockSegment alloc] initWithDigits:0];
-        _hoursSegment = [[APFlipClockSegment alloc] initWithDigits:0];
-        _minutesSegment = [[APFlipClockSegment alloc] initWithDigits:0];
-        _secondsSegment = [[APFlipClockSegment alloc] initWithDigits:0];
-        
-        self.backgroundColor = [UIColor clearColor];
-        
-        // We default to the current time
-        [self setClockType:APFlipClockTypeCountdown];
+        [self commonInit];
     }
     return self;
 }
@@ -84,7 +96,7 @@ static CGSize segmentSize = { 74, 68 };
     
     [self initializeAppearanceWithDays:days hours:hour minutes:min seconds:sec];
     
-    _timer = [NSTimer scheduledTimerWithTimeInterval:_showSeconds ? 1 : 60 target:self selector:@selector(flip) userInfo:nil repeats:YES];
+    _timer = [NSTimer scheduledTimerWithTimeInterval:_showSeconds ? 1 : 60 target:self selector:@selector(flip:) userInfo:nil repeats:YES];
     if (!_showSeconds) {
         [_timer setFireDate:[NSDate dateWithTimeIntervalSinceNow:sec]];
     }
@@ -213,11 +225,10 @@ static CGSize segmentSize = { 74, 68 };
 #pragma mark - 
 #pragma mark Flipping
 
-- (void)flip {
+- (void)flip:(id)sender {
     NSInteger seconds = (int)[_countdownDate timeIntervalSinceNow];
-    if (seconds < 0) {
+    if (seconds == 0) {
         [_timer invalidate];
-        return;
     }
     
     NSInteger days = seconds / (60 * 60 * 24);
